@@ -26,6 +26,13 @@ window.ConveadSettings = {
 (function(w,d,c){w[c]=w[c]||function(){(w[c].q=w[c].q||[]).push(arguments)};var ts = (+new Date()/86400000|0)*86400;var s = d.createElement('script');s.type = 'text/javascript';s.async = true;s.charset = 'utf-8';s.src = 'https://tracker.convead.io/widgets/'+ts+'/widget-4ec0ddc697c0de2e997ae76a5b7b94cf.js';var x = d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);})(window,document,'convead');
 </script>
 <!-- /Convead Widget -->
+	<script>
+  convead('event', 'view_product', {
+    product_id: 'PRODUCT_ID',
+    product_name: 'PRODUCT_NAME',
+    product_url: 'PRODUCT_URL'
+  });
+</script>
 </head>
 <body>
 	<!-- текст со словом внутри, по клику на которое запускается попап -->
