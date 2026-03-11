@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a call</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Top bar ── */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    header a.back {
+      color: #64748b;
+      text-decoration: none;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color .15s;
+    }
+    header a.back:hover { color: #1e293b; }
+    header h1 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    /* ── Main layout ── */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 16px 64px;
+    }
+
+    .page-intro {
+      max-width: 540px;
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .page-intro h2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+    .page-intro p {
+      color: #64748b;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ── Widget wrapper ── */
+    .widget-wrapper {
+      width: 100%;
+      max-width: 480px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="back" href="/testsite/">&#8592; Back</a>
+    <h1>📅 Book a call</h1>
+  </header>
+
+  <main>
+    <div class="page-intro">
+      <h2>Schedule a meeting</h2>
+      <p>Pick a date, choose a time slot and fill in your details — we'll confirm your booking right away.</p>
+    </div>
+
+    <div class="widget-wrapper">
+      <div id="scheduling-widget"></div>
+      <script
+        src="https://scheduler-prod.duckdns.org/widget.js"
+        data-container="#scheduling-widget"
+        data-api-url="https://scheduler-prod.duckdns.org">
+      </script>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -3,9 +3,36 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Popup application examples</title>
-
+<style>
+  .scheduler-btn {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 9999;
+    background: #2563eb;
+    color: #fff;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(37,99,235,.35);
+    transition: background .15s, box-shadow .15s;
+  }
+  .scheduler-btn:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 14px rgba(37,99,235,.45);
+  }
+</style>
 </head>
 <body>
+
+<!-- Book a call button — top-right corner -->
+<a class="scheduler-btn" href="/testsite/scheduler/">📅 Book a call</a>
 	<!-- text with the word in it, clicking which trigger the popup -->
 <text>To start the popup you should click <b class="sp_popup_6a2e6ba1-a0f8-47c2-817b-c38b52d336f4">HERE!</b></text><br><br><br>
 
